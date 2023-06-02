@@ -1,0 +1,859 @@
+.page .side-bar {
+    width: fit-content;
+    background-color: #eee;
+}
+.page .side-bar > h1 {
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+.page .side-bar > h1::after,
+.page .side-bar > h1::before {
+    content:'';
+    position: absolute;
+}
+.page .side-bar > h1::after {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 3px solid #eee;
+    background-color: black;
+    bottom: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.page .side-bar > h1::before {
+    width: 80%;
+    height: 3px;
+    border-radius: 5px;
+    border: 2px solid #eee;
+    background-color: black;
+    bottom: -8px;
+    left: 10%;
+}
+.page .side-bar ul li a {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+.page .side-bar ul li:hover {
+    background-color: blue;
+}
+.page .side-bar ul li {
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+}
+.page {
+    background-color: white;
+    display: flex;
+}
+@media (max-width: 768px){
+    .page .side-bar > h1::after,
+    .page .side-bar > h1::before {
+       display: none;
+   }
+   .page .side-bar ul li a span {
+       display: none;
+   }
+   .page .side-bar ul li a i {
+       text-align: center;
+       margin-left: -10px;
+   }
+   .welcome img {
+    display: none;
+   }
+   .content .avatar img{
+        position: absolute;
+        left: 50%;
+        top: -20px;
+        transform: translateX(-50%);
+    } 
+    .body {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.content .head .notif img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.head {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.content .head .notif {
+    display: flex;
+    align-items: center;
+}
+.content .head input {
+    position: relative;
+    outline: transparent;
+    padding-left: 30px;
+}
+.content .head .search {
+    position: relative;
+    margin-left: 10px;
+    transform: translateY(0px);
+}
+.content .head .search::after {
+    position: absolute;
+    font-family: var(--fa-style-family-classic);
+    content: "\f002";
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.content .head input:hover {
+    width: 190px;
+    outline: blue;
+    transition-duration: 4s;
+}
+.content .head span {
+    position: relative;
+}
+.content .head span::after {
+     position: absolute;
+     content: "";
+     bottom: 0px;
+     right: -8px;
+     width: 7px;
+     height: 7px;
+     background-color: red;
+     border-radius: 50%;
+}
+.content {
+    flex: 1;
+}
+.head .notif{
+    flex: 1;
+    justify-content: flex-end;
+}
+.dash h2 {
+    margin-left: 10px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.head {
+    margin-top: 10px;
+}
+.dash h2::after{
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 150px;
+    left: 0px;
+    bottom: 0px;
+    background-color: red;
+    background-image: linear-gradient(to right,black 0%, black 25%, #eee 25% , #eee 100%);
+}
+.welcome {
+    margin: 0 8px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #e6e6e6;
+    padding: 0 8px;
+    overflow: hidden;
+}
+.welcome img{
+    background-color: #e6e6e6;
+    margin: 20px 0 10px;
+}
+.welcome .text {
+    text-align: center;
+}
+.welcome .text p{
+    color: #666;
+}
+.content .avatar{
+    position: relative;
+    margin-bottom: 30px;
+}
+.content .avatar img {
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-top: -20px;
+    margin-left: 20px;    
+}
+.body {
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.body div {
+    text-align: center;
+}
+.body div p {
+    color: #666;
+}
+
+.content .profile{
+    display: flex;
+    justify-content: flex-end;
+}
+.content .profile a{
+    text-align: left;
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    padding: 6px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+.targets {
+    margin: 0px 10px;
+}
+.targets p {
+    color: #666;
+}
+.targets .target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.targets .target > .icon {
+    width: 70px;
+    text-align: center;
+    position: relative;
+    height: 60px;
+    background-color: aqua;
+    margin-bottom: -40px;
+}
+.targets .target > .icon i {
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+}
+.targets .target .details > span,
+.targets .target .details div{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.targets .target .details > span:first-child {
+    color: #666;
+}
+.targets .target .details div {
+    height: 3px;
+    width: 100%;
+    position: relative;
+    background-color: #eee;
+}
+.targets .target .details {
+    display: block;
+    flex: 1;
+    height: 40px;
+}
+.targets .target .details div span {
+    position: absolute;
+    height: 5px;
+    top: 0px;
+    left: 0px;
+}
+.targets .target .details div .blue {
+    background-color: blue;
+}
+.targets .target .details div .orange {
+    background-color: orange;
+}
+.targets .target .details div .green {
+    background-color: green;
+}
+.targets .icon {
+    margin-right: 30px;
+}
+.targets,
+.target {
+    margin: 40px;
+}
+.targets .target > .blue {
+    background-color: blue;
+    color: #eee;
+}
+.targets .target > .green {
+    background-color: green;
+    color: #eee;
+}
+.targets .target > .orange {
+    background-color: orange;
+    color: #eee;
+}
+.targets .target .details div span {
+
+}
+.targets .target .details div span::after {
+    position: absolute;
+    content: attr(txt);
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    right: 0px;
+    top: -40px;
+}
+.targets .target .details div .blue::after{
+    background-color: blue;
+}
+.targets .target .details div .orange::after{
+    background-color: orange;
+}
+.targets .target .details div .green::after{
+    background-color: green;
+}
+.targets .target .details div span::before {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    content: "";
+    right: 4px;
+    top: -20;
+    border: 10px solid;
+}
+.targets .target .details div .blue::before{
+    border-color: blue transparent transparent transparent;
+}
+.targets .target .details div .orange::before{
+    border-color: orange transparent transparent transparent;
+}
+.targets .target .details div .green::before{
+    border-color: green transparent transparent transparent;
+}
+.quick::after {
+    width: 80%;
+    height: 3px;
+    background-color: #666;
+    content: "";
+    position: absolute;
+    left: 10%;
+    top: -20px;
+}
+.quick::before {
+    width: 80%;
+ 
+    height: 3px;
+    background-color: #666;
+    content: "";
+    position: absolute;
+    left: 10%;
+    bottom: -20px;
+}
+.quick {
+    margin: 30px;
+    transform: translateY(50px);
+    position: relative;
+}
+.quick h1{
+    margin-top: 20px;
+    color: brown;
+}
+.quick form textarea,
+.quick form input:first-of-type {
+    border: none;
+    background-color: #eee;
+    margin: 10px;
+}
+.quick form textarea {
+    height: 200px;
+    width: 80%;
+}
+.quick form input:last-child{
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 70%;
+}
+.latest {
+    margin: 0 20px;
+    transform: translateY(70px);
+    text-align: center;
+}
+.latest .col{
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.latest .col::after{
+    position: absolute;
+    content: "";
+    background-color: #666;
+    height: 1px;
+    width: 80%;
+    left: 10%;
+}
+.latest .col::after{
+    bottom: -30px;
+}
+.latest .box .col span{
+    background-color: #eee;
+    padding: 6px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+.latest .box .col img {
+    border-radius: 6px;
+}
+@media (min-width:900px){
+    .latest .box {
+        display: grid;
+        margin-left: 50px;
+         grid-template-columns: repeat(auto-fill , 47%);
+    }
+    .latest .box .col {
+        width: 47%;
+    }
+}
+@media (min-width:1200px){
+    .latest .box {
+        display: grid;
+        grid-template-columns: repeat(auto-fill , 23%);
+        margin-left: 30px;
+    }
+    .latest .box .col {
+        width: 23%;
+    }
+}
+.search {
+    transform: translateY(80px);
+    margin: 60px;
+}
+.search div {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+.search div span:nth-child(2){
+    background-color: #eee;
+    padding: 7px;
+    border-radius: 4px;
+}
+.search div span:nth-child(1){
+    color: #666;
+}
+.tasks {
+    transform: translateY(100px);
+    margin: 50px;
+}
+.tasks .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tasks .box p{
+    color: #666;
+}
+.tasks .box i:hover {
+    color: red;
+}
+.tasks .box {
+    border-bottom: 1px solid #666;
+    margin-bottom: 16px;
+}
+.tasks .box .dash h2::after{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    height: 2px;
+    width: 100%;
+    z-index: 5;
+}
+.tasks .box .dash2,
+.tasks .box .dash h2{
+    position: relative;
+    opacity: .2;
+    color: #666;
+    
+}
+.tasks .box .dash p::after{
+    position: absolute;
+    content: "";
+    background-color: #666;
+    top: 50%;
+    left: 0px;
+    transform: translateY(50%);
+    height: 1px;
+    width: 100%;
+    z-index: 5;
+}
+
+.tasks .box .dash p{
+    position: relative;
+    opacity: .5;
+}
+.social {
+    transform: translateY(150px);
+    margin: 20px;
+}
+.social h1 {
+    margin: 30px;
+}
+.social .content {
+    display: flex;
+    justify-content: space-between;
+    padding:0 30px;
+    margin: 20px 0;
+    align-items: center;
+}
+.social .content button {
+    margin: 8px 0;
+}
+.social .twitter i {
+    height: 100%;
+    width: 60px;
+    color: white;
+    background-color: cornflowerblue;
+    text-align: center;
+    margin-left: -30px;
+}
+.social .facebook i {
+    height: 100%;
+    width: 60px;
+    color: white;
+    background-color: blue;
+    text-align: center;
+    margin-left: -30px;
+}
+.social .youtube i {
+    height: 100%;
+    width: 60px;
+    color: white;
+    background-color: red;
+    text-align: center;
+    margin-left: -30px;
+}
+.social .linkedin i {
+    height: 100%;
+    width: 60px;
+    color: white;
+    background-color: steelblue;
+    text-align: center;
+    margin-left: -30px;
+}
+.social .content i{
+    padding: 6px 0;
+}
+.social .content button{
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 4px;
+}
+.social .linkedin button{
+    background-color: steelblue;
+}
+.social .youtube button {
+    background-color: red;
+}
+.social .facebook button  {
+    background-color: blue;
+}
+.social .twitter button {
+    background-color: cornflowerblue;
+}
+.social .facebook{
+    background-color: rgb(0 0 255 / 40%);
+    color: white;
+}
+.social .youtube{
+    background-color: rgb(255 0 0 / 16%);
+    color: white;
+}
+.social .twitter{
+    background-color: rgb(0 0 255 / 16%);
+    color: white;
+}
+.social .linkedin{
+    background-color: rgb(0 0 180 / 40%);
+    color: white;
+
+}
+.social .content i:hover {
+    transform: rotate(20deg);
+}
+.static{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(170px);
+}
+.static .boxs{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border: 1.5px solid #666;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}
+.static .boxs i, 
+.static .boxs span, 
+.static .boxs h2 {
+    margin: 6px 0;
+}
+.static .boxs h2{
+    font-size: 30px;
+    color: #666;
+}
+.static .boxs .orange{
+    color: orange;
+}
+.static .boxs .green{
+    color: green;
+}
+.static .boxs .blue{
+    color: blue;
+}
+.progress {
+    transform: translateY(150px);
+    margin:0 30px;
+}
+.progress div {
+    border-left: 2px solid blue;
+    padding:10px 20px;
+}
+.progress div p {
+    margin: 25px 0;
+}
+.progress div p{
+    position: relative;
+}
+.progress div p::after{
+    position: absolute;
+    content: "";
+    left: -32px;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    border: 1px solid blue;
+    background-color: white;
+}
+.progress div .two::before,
+.progress div .three::before,
+.progress div .one::before {
+    position: absolute;
+    content: "";
+    left: -29px;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    background-color: blue;
+    z-index: 7;
+}
+@keyframes oops {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: blue;
+    }
+}
+.progress div .four::before {
+    position: absolute;
+    content: "";
+    left: -29px;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    z-index: 7;
+    animation-name: oops;
+    animation-duration: .6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+table {
+    transform: translateY(180px);
+    margin:0 25px;
+    overflow-x: scroll;
+}
+table thead tr {
+    margin: 5px;
+    border: 1px solid #666;
+}
+table tbody td,
+table thead td {
+    padding: 10px;
+    text-align: center;
+    margin: 4px;
+    border:1px solid  #666;
+}
+table thead td{
+    font-weight: bold;
+    border:1px solid  royalblue;
+}
+table  td button{
+    border-radius: 4px;
+    border: none;
+}
+table .one button {
+    background-color: rgb(0 255 0 / 70%);
+    border: none;
+    color: white;
+}
+table td{
+    position: relative;
+}
+table td img {
+    border-radius: 50%;
+    border: 2px solid white;
+    position: relative;
+}
+table .four button,
+table .two button {
+    background-color: rgb(255 0 0 / 70%);
+    border: none;
+    color: white;
+}
+table .five button {
+    background-color: orange;
+    border: none;
+    color: white;
+}
+table .three button {
+    background-color: blue;
+    border: none;
+    color: white;
+}
+table .six button {
+    background-color: firebrick;
+    border: none;
+    color: white;
+}
+table thead  {
+    background-color: #e6e6e6;
+}
+table td {
+    border-radius: 3px;
+}
+.upload{
+    margin: 30px;
+    padding:0 20px;
+    transform: translateY(180px);
+}
+.upload .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+.upload .box div {
+    flex: 1;
+    margin-left: 20px;
+}
+.upload .box div p:last-child {
+    color: #666;
+}
+.upload .box span {
+    padding: 6px;
+    border-radius: 4px;
+    background-color: #e6e6e6
+    ;
+}
+.reminder {
+    transform: translateY(180px);
+    margin: 20px;
+    padding: 40px;
+}
+.reminder div p:first-child{
+    margin-bottom: -12px;
+}
+.reminder div {
+    border-left:2px solid ;
+    padding:0 20px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.reminder .blue {
+    border-color: blue;
+}
+.reminder .red {
+    border-color: red;
+}
+.reminder div::after {
+    content: "";
+    position: absolute;
+    left: -24px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.reminder .red::after {
+    background-color: red;
+}
+.reminder .blue::after {
+    background-color: blue;
+}
+.upload div p {
+    color: #666;
+}
+.post {
+    transform: translateY(170px);
+    margin: 60px;
+}
+.post .box1 {
+    display: flex;
+    align-items: center;
+}
+.post .box1 div {
+    flex: 1;
+    margin-left: 20px;
+}
+.post .box1 img {
+    border-radius: 50%;
+}
+.post .box1 div p:first-child {
+    margin-bottom: -12px;
+    font-weight: bolder;
+}
+.post .box2 {
+    display: flex;
+    justify-content: space-between;
+    padding:0 30px;
+    color: #666;
+    margin: 15px 0;
+}
+.post .box2 span {
+    position: relative;
+}
+.post .box2 span::after {
+    position: absolute;
+    left: -22px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    font-family: var(--fa-style-family-classic);
+}
+.post .box2 span:first-child:after{
+    content: "\f004";
+}
+.post .box2 span:last-child:after{
+    content: "\f086";
+    left: -25px;
+}

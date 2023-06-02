@@ -1,0 +1,289 @@
+.content .dash {
+    padding:0 30px;
+}
+.toggle {
+    background-color: #666;
+    width: 72px;
+    height: 30px;
+    border-radius: 16px;
+    position: relative;
+    transition-duration: 2s;
+}
+.checked {
+    display: none;
+}
+.toggle::after {
+    position: absolute;
+    font-family: var(--fa-style-family-classic);
+    height: 24px;
+    content: '\f057';
+    width: 24px;
+    border-radius: 12px;
+    background-color: white;
+    left: 4px;
+    top: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 2s;
+    color: #666;
+}
+.checked:checked + .toggle::after{
+    left: 40px;
+    content: "\f058";
+    transition-duration: 2s;
+    color: blue;
+}
+.checked:checked + .toggle{
+    background-color: blue;
+}
+.control .one {
+    display: flex;
+    flex-direction: row;
+     justify-content: space-around;
+    align-items: center;
+}
+.control .one span {
+    color: #666;
+    flex: 1;
+}
+.control {
+    padding:0 50px;
+}
+.control .p2 {
+    margin-bottom: -1px;
+    font-weight: bolder;
+}
+.control .p1 {
+    margin-top: -15px;
+    color: #666;
+    flex: 1;
+}
+.control textarea {
+    border: 1px solid #666;
+    width: 200px;
+    height: 300px;
+    margin: 30px;
+    padding: 10px;
+    border-radius: 4px;
+    outline-color: transparent;
+    background-color: #e6e6e6;
+}
+.security {
+    margin:0 30px;
+}
+.security h2 {
+    font-weight: bolder;
+    margin-bottom: -10px;
+}
+.security p {
+    color: #666;
+}
+.security div {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70px;
+}
+.security .three div {
+    display: inline-block;
+}
+.security .three div a {
+    text-decoration: none;
+    margin-left: 40px;
+    padding: 7px;
+    color: white;
+    background-color: rgb(0 255 0 / 60%);
+    border-radius: 4px;
+}
+.security div input {
+    color: #666;
+    padding: 4px;
+    width: 150px;
+}
+.security div input {
+    outline: none;
+}
+.security div label {
+    color: #666;
+    padding:0 2px;
+}
+.backup form input {
+    display: none;
+}
+form {
+    margin:0 30px;
+    text-align: center;
+}
+.backup form label {
+    display: block;
+    padding: 10px;
+    background-color: #e6e6ee;
+    margin: 7px;
+    border-radius: 4px;
+    width: 70px;
+}
+.backup form .one:checked .mega,
+.backup form .three:checked .sigma,
+.backup form .two:checked .zero{
+    color: blue;
+    border: 1px solid blue;
+}
+.backup form #mega:checked +.mega,
+.backup form #sigma:checked +.sigma,
+.backup form #zero:checked +label{
+    color: blue;
+    border: 1px solid blue;
+    background-color: white;
+}
+.backup p,
+.backup h4 {
+    margin: 0 35px;
+}
+.backup p {
+    margin-top: 4px;
+    color: #666;
+    margin-bottom: 20px;
+}
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.info {
+    margin:0 40px;
+}
+.info .two,
+.info .one {
+    display: flex;
+    align-items: center;
+}
+.info .one span {
+    margin-left: 50px;
+    padding: 7px;
+    color: white;
+    background-color: blue;
+    border-radius: 6px;
+}
+.info .two p:last-child,
+.info .one p:last-child {
+    margin-top: -8px;
+    color: #666;
+}
+.info .two .two2 {
+    margin-left: 50px;
+}
+.toggles {
+    background-color: #666;
+    width: 72px;
+    height: 30px;
+    border-radius: 16px;
+    position: relative;
+    transition-duration: 2s;
+}
+.toggles::after {
+    position: absolute;
+    font-family: var(--fa-style-family-classic);
+    height: 24px;
+    content: '\f00d';
+    width: 24px;
+    border-radius: 12px;
+    background-color: white;
+    left: 4px;
+    top: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 2s;
+    color: #666;
+}
+#a7:checked + .toggles::after{
+    left: 40px;
+    content: "\f00c";
+    transition-duration: 2s;
+    color: blue;
+}
+#a7:checked + .toggles{
+    background-color: blue;
+}
+#a7 {
+    display: none;
+}
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.info h3 {
+    margin-top: 30px;
+    border-top:1px solid #666;
+    padding: 7px;
+}
+.info > p {
+    margin-top: -15px;
+    color: #666;
+    margin-bottom: 30px;
+}
+.linked input,
+.insta input,
+.twitt input {
+    padding: 3px;
+    padding-left: 50px;
+    outline: none;
+    border-radius: 5px;
+    border:1px solid #666;
+    width: 180px;
+}
+.linked,
+.insta,
+.twitt {
+    position: relative;
+}
+.twitt:focus-within + .twitt::after {
+    color: blue;
+}
+.linked i,
+.insta i,
+.twitt i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translatey(-50%);
+    border-right:1.5px solid #666;
+    padding-right: 4px;
+} 
+.twitt,
+.insta,
+.linked {
+    margin: 15px;
+}
+.twitt:focus-within i{
+    color: blue;
+}
+.social{
+    margin:0 40px;
+}
+.social h5{
+    font-weight: bolder;
+}
+.social > p {
+    color: #666;
+    margin-top: -10px;
+}
+.insta:focus-within i{
+    color: red;
+}
+.linked:focus-within i{
+    color: blue;
+}
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(-300px);
+}
+

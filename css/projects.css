@@ -1,0 +1,86 @@
+.projects ul li {
+    list-style: none;
+    padding: 6px;
+    background-color: #e6e6e6;
+    width: fit-content;
+    margin: 4px;
+    border-radius: 6px;
+}
+ul {
+    margin-right: auto;
+    border:2px solid #e6e6e6;
+    border-color: #e6e6e6 transparent;
+    padding: 5px;
+}
+.projects .imgs img {
+    border-radius: 50%;
+}
+.projects .imgs {
+    margin: 15px 0;
+}
+.projects {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.projects .date {
+    margin-left: auto;
+    margin-right: 20px;
+}
+@media (min-width: 1200px) {
+    .tasks .projects {
+        width: 32%;
+    }
+    .tasks {
+        display: grid;
+        grid-template-columns: 32% 32% 32%;
+    }
+}
+@media (min-width: 900px) {
+    .tasks .projects {
+        width: 48%;
+    }
+    .tasks {
+        display: grid;
+        grid-template-columns: 48% 48%;
+    }
+}
+.level4,
+.level3,
+.level2,
+.level1 {
+    height: 3px;
+    width: 100%;
+    background-color: #e6e6e6;
+    border-radius: 4px;
+    position: relative;
+    margin: 20px;
+}
+.level4::after,
+.level3::after,
+.level2::after,
+.level1::after {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    width: 70%;
+    border-radius: 4px;
+    height: 4px;   
+}
+.level4::after {
+    background-color: green;
+}
+.level3::after {
+    background-color: orange;
+    width: 80%;
+}
+.level2::after {
+    background-color: blue;
+    width: 30%;
+}
+.level1::after {
+    background-color: red;
+    width: 50%;
+}

@@ -1,0 +1,207 @@
+.prof1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.toggle2 {
+    background-color: #666;
+    width: 72px;
+    height: 30px;
+    border-radius: 16px;
+    position: relative;
+    transition-duration: 2s;
+}
+.checked {
+    display: none;
+}
+.toggle2::after {
+    position: absolute;
+    font-family: var(--fa-style-family-classic);
+    height: 24px;
+    content: '\f057';
+    width: 24px;
+    border-radius: 12px;
+    background-color: white;
+    left: 4px;
+    top: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 2s;
+    color: #666;
+}
+.checked:checked + .toggle2::after{
+    left: 40px;
+    content: "\f058";
+    transition-duration: 2s;
+    color: blue;
+}
+.checked:checked + .toggle2{
+    background-color: blue;
+}
+.prof1 ul {
+    list-style: none;
+    display: flex;
+    color: orange;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+}
+.prof1 div span {
+    color: #666;
+    margin-right: 8px;
+}
+.prof1 .zero,
+.prof1 .three,
+.prof1 .two,
+.prof1 .one {
+    margin: 20px 0;
+    padding: 13px;
+    position: relative;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.prof1 .three::after,
+.prof1 .two::after,
+.prof1 .one::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    bottom: -30px;
+    background-color: #666;
+ }
+ .prof1 .zero img {
+    border-radius: 50%;
+ }
+ .prof1 .one > p:first-child,
+ .prof1 .two > p:first-child,
+ .prof1 .three > p:first-child {
+    color: #666;
+    font-weight: bolder;
+ }
+ .lvl {
+    height: 4px;
+    width: 200px;
+    border-radius: 4px;
+    background-color: #e6e6e6;
+    position: relative;
+ }
+ .lvl::after {
+    background-color: orange;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    content: "";
+    height: 100%;
+    width: 80%;
+    border-radius: 4px;
+ }
+ .skills .skill2 ul{
+    padding: 5px;
+    position: relative;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .skills .skill2 > h1 {
+    font-weight: bolder;
+    margin-left: 40px;
+ }
+ .skills .skill2 > p {
+    color: #666;
+    margin-left: 40px;
+ }
+ .skills .skill2 ul::after {
+    position: absolute;
+    background-color: #e6e6e6;
+    height: 2px;
+    width: 200px;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+ }
+ .skills .skill2 ul li {
+    padding: 5px;
+    margin: 5px;
+    background-color: #e6e6e6;
+    border-radius: 4px;
+ }
+ .skill3 .activ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+ .skill3 .activ div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 0;
+ }
+ .skill3 .activ img {
+    border-radius: 50%;
+ }
+ .activ p {
+    color: #666;
+ }
+ .activ span {
+    font-weight: bold;
+ }
+ .skill3 h4 {
+    margin-left: 40px;
+    font-weight: bold;
+ }
+ .skill3 > p {
+    margin-left: 40px;
+    color: #666;
+    
+ }
+ @media (min-width :1000px) {
+    .skills {
+        display: grid;
+        grid-template-columns: 500px 500px;
+        margin-top: 40px;
+        margin:40 auto;
+        text-align: center;
+    }
+    .skills .skill3 .activ {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+    }
+    .skills .skill2 > h1 {
+        font-weight: bold;
+        margin-left: 0px;
+        text-align: center;
+     }
+     .skills .skill2 > p {
+        color: #666;
+        margin-left: 0px;
+        text-align: center;
+        margin-top: -10px;
+     }
+     .skill3 h4 {
+        margin-left: 0px;
+        font-weight: bolder;
+        font-size: 30px;
+        margin-bottom: 60px;
+     }
+     .skill3 > p {
+        margin-left: 0px;
+        color: #666;
+        margin-top: -50px;
+     }
+     .skill3 {
+        margin-top: -15px;
+     }
+ }

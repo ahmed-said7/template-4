@@ -1,0 +1,8 @@
+.courses div img {
+    border-radius: 50%;
+    border: 2px solid #e6e6e6;
+    margin: 20px;
+}
+.courses {
+    padding: 20px;
+}
